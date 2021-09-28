@@ -23,15 +23,18 @@ class PlaygroundViewController: UIViewController {
     }
     
     @IBAction func switcherAction(_ sender: Any) {
+        print("switcher action performed");
         stepper.isHidden = !switcher.isOn;
         slider.isHidden = !switcher.isOn;
     }
     
     @IBAction func sliderAction(_ sender: Any) {
+        print("slider action performed");
         stepCounterLabel.textColor = UIColor.init(hue: CGFloat(slider.value), saturation: 1.0, brightness: 1.0, alpha: 1.0);
     }
     
     @IBAction func stepperAction(_ sender: Any) {
+        print("stepper action performed");
         stepCounterLabel.text = "\(Int(stepper.value))";
     }
     
